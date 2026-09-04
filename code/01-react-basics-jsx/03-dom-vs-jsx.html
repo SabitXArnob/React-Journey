@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Basics</title>
+  </head>
+
+  <body>
+    <div class="js-container"></div>
+
+    <!-- Load React and ReactDOM libraries -->
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <!-- Load Babel to translate JSX into JavaScript -->
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <!-- JSX code -->
+    <script type="text/babel">
+      // 1. Using the DOM:
+      const domButton = document.createElement('button');
+      domButton.innerHTML = 'Hello';
+
+      // 2. Using JSX:
+      const reactButton = <button>Hello</button>;
+
+      // React Setup
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
+    </script>
+  </body>
+</html>

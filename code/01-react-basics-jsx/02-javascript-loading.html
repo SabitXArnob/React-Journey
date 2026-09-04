@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Basics</title>
+  </head>
+
+  <body>
+    <div class="js-container"></div>
+
+    <!-- There are several ways to Load JavaScript onto a Website -->
+
+    <!-- Method 1: Write JavaScript directly inside HTML -->
+    <script>
+      console.log('Hello')
+    </script>
+
+    <!-- Method 2: Load JavaScript from an external file -->
+    <script src="react-basics.js"></script>
+
+    <!-- Method 3: Load JavaScript from an external URL -->
+    <script src="https://unpkg.com/supersimpledev@8.6.4/external-library.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
+    </script>
+  </body>
+</html>
