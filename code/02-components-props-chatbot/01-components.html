@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+  </head>
+
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      // The component name must start with a capital letter (PascalCase).
+
+      function ChatInput() {
+        return (
+          <div>
+            <input />
+            <button>Send</button>
+          </div>
+        );
+      }
+
+      const div = (
+        <div>
+          {ChatInput()}
+
+          {/* Component syntax: lets us create and use our own components */}
+          <ChatInput></ChatInput>
+
+          <ChatInput />
+        </div>
+      );
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>
+
+<!--
+  JSX is more strict than HTML.
+  In JSX, every element must have a closing tag.
+
+  <input /> is a self-closing tag.
+  It is the same as <input></input>.
+-->
